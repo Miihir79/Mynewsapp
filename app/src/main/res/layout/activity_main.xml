@@ -13,6 +13,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
     <HorizontalScrollView
@@ -24,42 +25,91 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/button4"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_entertainment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Button"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/ent"
+                app:cornerRadius="20dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintStart_toEndOf="@id/btn_business"
+                app:layout_constraintTop_toTopOf="parent"/>
 
-            <Button
-                android:id="@+id/button3"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_science"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sci"
+                app:cornerRadius="20dp"
+                app:backgroundTint="@color/teal_200"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_entertainment"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health"
+                app:cornerRadius="20dp"
+                app:backgroundTint="@color/teal_200"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_science"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_business"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:text="Sports"
-                app:layout_constraintStart_toEndOf="@+id/button2"
+                android:text="@string/business"
+                app:cornerRadius="20dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintStart_toEndOf="@id/btn_sports"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button2"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/sports"
+                app:cornerRadius="20dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintStart_toEndOf="@+id/btn_tech"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_tech"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="1dp"
-                android:text="Technology"
-                app:layout_constraintStart_toEndOf="@+id/button"
+                android:text="@string/tech"
+                app:cornerRadius="20dp"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintStart_toEndOf="@+id/btn_top"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/button"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="All"
+                android:text="@string/top"
+                android:fontFamily="@font/gilroy_semi_bold"
+                app:backgroundTint="@color/teal_200"
+                app:cornerRadius="20dp"
+                android:layout_marginStart="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>

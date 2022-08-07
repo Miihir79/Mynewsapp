@@ -1,48 +1,40 @@
 package com.example.mynewsapp
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.mynewsapp.databinding.ItemNewsBinding
 
-class NewsListAdapter( private val listner:NewsItemClicked) : RecyclerView.Adapter<NewsViewHolder>() {
-    private val items:ArrayList<News> = ArrayList()
+class NewsListAdapter(private val items : News) : RecyclerView.Adapter<NewsListAdapter.NewsViewHolder>() {
+
+    inner class NewsViewHolder (binding: ItemNewsBinding): RecyclerView.ViewHolder(binding.root){
+        val titleView: TextView = binding.title
+        val image : ImageView = binding.images
+        val author: TextView = binding.author
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_news,parent,false)
-        val viewHolder = NewsViewHolder(view)
-        view.setOnClickListener{
-            listner.onItemClicked(items[viewHolder.adapterPosition])
-        }
-        return viewHolder
+        return NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        val currentItem = items[position]
+        val currentItem = items.articles[position]
         holder.titleView.text = currentItem.title
         holder.author.text = currentItem.author
-        Glide.with(holder.itemView.context).load(currentItem.imageUrl).into(holder.image)
+        Glide.with(holder.itemView.context).load(currentItem.urlToImage).into(holder.image)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(currentItem.url)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
-        return items.size
+        return items.articles.size
     }
-fun updateNews(updatedNews:ArrayList<News>){
-    items.clear()
-    items.addAll(updatedNews)
-
-    notifyDataSetChanged()
-}
-
-}
-class NewsViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
-    val titleView: TextView = itemView.findViewById(R.id.title)
-    val image : ImageView = itemView.findViewById(R.id.images)
-    val author: TextView = itemView.findViewById(R.id.author)
-}
-
-interface NewsItemClicked{
-    fun onItemClicked(item:News)
 }

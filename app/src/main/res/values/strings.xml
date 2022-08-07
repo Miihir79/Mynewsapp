@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Mynewsapp</string>
+    <string name="top">Top</string>
+    <string name="tech">Tech</string>
+    <string name="sports">Sports</string>
+    <string name="business">Business</string>
+    <string name="ent">Entertainment</string>
+    <string name="sci">Science</string>
+    <string name="health">Health</string>
 </resources>
