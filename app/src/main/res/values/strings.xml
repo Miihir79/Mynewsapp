@@ -7,4 +7,5 @@
     <string name="ent">Entertainment</string>
     <string name="sci">Science</string>
     <string name="health">Health</string>
+    <string name="img_description">News banner image</string>
 </resources>
