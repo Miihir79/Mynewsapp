@@ -1,5 +1,8 @@
 package com.example.mynewsapp
 
+import androidx.annotation.Keep
+
+@Keep
 data class Article(
     val author: String,
     val content: String,
