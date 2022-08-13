@@ -6,8 +6,8 @@ I also have implemented R8 here for optimization
 ### R8 results:
 <table>
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/66465511/184499137-d8b2ad39-2828-4b71-a643-659f06283fa7.jpg" width="350">
-    <td><img src="https://user-images.githubusercontent.com/66465511/184499133-b4222aa8-a3b7-4fef-9322-57de369ed3e0.jpg" width="350">
+    <td><img src="https://user-images.githubusercontent.com/66465511/184499137-d8b2ad39-2828-4b71-a643-659f06283fa7.jpg" width="250">
+    <td><img src="https://user-images.githubusercontent.com/66465511/184499133-b4222aa8-a3b7-4fef-9322-57de369ed3e0.jpg" width="250">
 </table>
 
 We can clearly see form this results, the app size has reduced significantly by using R8.
