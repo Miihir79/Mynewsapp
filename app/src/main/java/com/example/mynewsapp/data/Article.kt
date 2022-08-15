@@ -1,4 +1,4 @@
-package com.example.mynewsapp
+package com.example.mynewsapp.data
 
 import androidx.annotation.Keep
 

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.mynewsapp.ui.ViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -37,6 +44,8 @@
                 app:cornerRadius="20dp"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:backgroundTint="@color/teal_200"
+                term="@{@string/entertainment}"
+                viewModel="@{vm}"
                 app:layout_constraintStart_toEndOf="@id/btn_business"
                 app:layout_constraintTop_toTopOf="parent"/>
 
@@ -48,6 +57,8 @@
                 app:cornerRadius="20dp"
                 app:backgroundTint="@color/teal_200"
                 android:layout_marginStart="16dp"
+                viewModel="@{vm}"
+                term="@{@string/science}"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btn_entertainment"/>
@@ -60,6 +71,8 @@
                 app:cornerRadius="20dp"
                 app:backgroundTint="@color/teal_200"
                 android:layout_marginStart="16dp"
+                term="@{@string/health_text}"
+                viewModel="@{vm}"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btn_science"/>
@@ -71,6 +84,8 @@
                 android:layout_marginStart="16dp"
                 android:text="@string/business"
                 app:cornerRadius="20dp"
+                term="@{@string/busi}"
+                viewModel="@{vm}"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:backgroundTint="@color/teal_200"
                 app:layout_constraintStart_toEndOf="@id/btn_sports"
@@ -83,6 +98,8 @@
                 android:layout_marginStart="16dp"
                 android:text="@string/sports"
                 app:cornerRadius="20dp"
+                term="@{@string/sport}"
+                viewModel="@{vm}"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:backgroundTint="@color/teal_200"
                 app:layout_constraintStart_toEndOf="@+id/btn_tech"
@@ -96,6 +113,8 @@
                 android:layout_marginTop="1dp"
                 android:text="@string/tech"
                 app:cornerRadius="20dp"
+                term="@{@string/tech_string}"
+                viewModel="@{vm}"
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:backgroundTint="@color/teal_200"
                 app:layout_constraintStart_toEndOf="@+id/btn_top"
@@ -109,9 +128,12 @@
                 android:fontFamily="@font/gilroy_semi_bold"
                 app:backgroundTint="@color/teal_200"
                 app:cornerRadius="20dp"
+                viewModel="@{vm}"
+                term="@{null}"
                 android:layout_marginStart="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -8,4 +8,10 @@
     <string name="sci">Science</string>
     <string name="health">Health</string>
     <string name="img_description">News banner image</string>
+    <string name="tech_string">technology</string>
+    <string name="entertainment">entertainment</string>
+    <string name="science">science</string>
+    <string name="health_text">health</string>
+    <string name="busi">business</string>
+    <string name="sport">sports</string>
 </resources>

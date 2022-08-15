@@ -1,4 +1,4 @@
-package com.example.mynewsapp
+package com.example.mynewsapp.ui
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.mynewsapp.data.News
 import com.example.mynewsapp.databinding.ItemNewsBinding
 
 class NewsListAdapter(private val items : News) : RecyclerView.Adapter<NewsListAdapter.NewsViewHolder>() {
