@@ -1,6 +1,15 @@
 # Mynewsapp
 A news app made by using Api provided by NewsApi. This app uses Retrofit to make network requests
 
+### App screenshots
+
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/66465511/184499247-dd1268ba-3a52-4658-90b9-532504293c8b.jpg" width="350">
+    <td><img src="https://user-images.githubusercontent.com/66465511/184499244-fc629152-c9ac-42b8-8d7d-87705100311b.jpg" width="350">
+    <td><img src="https://user-images.githubusercontent.com/66465511/184499245-b4a220c5-f00d-434e-b03a-632a5ca88c69.jpg" width="350">
+</table>
+
 I also have implemented R8 here for optimization 
 
 ### R8 results:
@@ -12,14 +21,6 @@ I also have implemented R8 here for optimization
 
 We can clearly see form this results, the app size has reduced significantly by using R8.
 
-### App screenshots
-
-<table>
-  <tr>
-    <td><img src="https://user-images.githubusercontent.com/66465511/184499247-dd1268ba-3a52-4658-90b9-532504293c8b.jpg" width="350">
-    <td><img src="https://user-images.githubusercontent.com/66465511/184499244-fc629152-c9ac-42b8-8d7d-87705100311b.jpg" width="350">
-    <td><img src="https://user-images.githubusercontent.com/66465511/184499245-b4a220c5-f00d-434e-b03a-632a5ca88c69.jpg" width="350">
-</table>
 
 ## How to contribute?
 ### What do you need to get started?
